@@ -79,3 +79,15 @@ const myCar = new Car("America", 2024, "Tesla CyberTruck");
 
 console.log(myCar.getInfo());
 console.log(myCar.getModel());
+
+
+
+// TASK - 5
+
+function processValue(value: string | number): number {
+    return typeof value === "string" ? value.length : value * 2;
+};
+
+const processedResult = processValue(6);
+
+console.log(processedResult);
