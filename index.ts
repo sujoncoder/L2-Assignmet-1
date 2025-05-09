@@ -139,3 +139,34 @@ function getDayType(day: Day): string {
 
 console.log("Task-7:", getDayType(Day.Monday));
 console.log("Task-7:", getDayType(Day.Sunday));
+
+
+
+// Task - 8
+async function squareAsync(n: number): Promise<number> {
+
+    return new Promise((resolve, reject) => {
+
+        if (n < 0) {
+            reject(new Error("Error: Negative number not allowed"));
+        } else {
+            setTimeout(() => {
+                resolve(n * n)
+            }, 1000);
+        };
+
+    });
+
+};
+
+
+async function run() {
+    try {
+        const res = await squareAsync(-8);
+        console.log(res)
+    } catch (error: any) {
+        console.log("Task-8:", error.message)
+    }
+};
+
+run();
