@@ -4,7 +4,7 @@ function formatString(input: string, toUpper?: boolean): string {
 };
 
 const result = formatString("hello");
-console.log(result)
+console.log("Task-1:", result)
 
 
 
@@ -30,7 +30,7 @@ const books = [
 ];
 
 const filteredBooks = filterByRating(books);
-console.log(filteredBooks);
+console.log("Task-2:", filteredBooks);
 
 
 
@@ -41,7 +41,7 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
 
 const finalArray = concatenateArrays([1, 2, 3], [4], [5]);
 
-console.log(finalArray);
+console.log("Task-3:", finalArray);
 
 
 
@@ -77,8 +77,8 @@ class Car extends Vehicle {
 
 const myCar = new Car("America", 2024, "Tesla CyberTruck");
 
-console.log(myCar.getInfo());
-console.log(myCar.getModel());
+console.log("Task-4:", myCar.getInfo());
+console.log("Task-4:", myCar.getModel());
 
 
 
@@ -90,7 +90,7 @@ function processValue(value: string | number): number {
 
 const processedResult = processValue("iamsujon");
 
-console.log(processedResult);
+console.log("Task-5:", processedResult);
 
 
 
@@ -104,7 +104,7 @@ interface Product {
 function getMostExpensiveProduct(products: Product[]): Product | null {
     if (products.length === 0) return null;
 
-    return products.reduce((maxProduct, currentProduct) => currentProduct.price > maxProduct.price ? currentProduct : maxProduct);
+    return products.reduce((maxP, currentP) => currentP.price > maxP.price ? currentP : maxP);
 };
 
 const products = [
@@ -115,4 +115,27 @@ const products = [
 
 const richProduct = getMostExpensiveProduct(products);
 
-console.log(richProduct);
+console.log("Task-6:", richProduct);
+
+
+
+
+// Task - 7
+enum Day {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+};
+
+function getDayType(day: Day): string {
+
+    return day === Day.Saturday || day === Day.Sunday ? "Weekend" : "Weekday";
+
+};
+
+console.log("Task-7:", getDayType(Day.Monday));
+console.log("Task-7:", getDayType(Day.Sunday));
