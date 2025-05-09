@@ -36,8 +36,46 @@ console.log(filteredBooks);
 
 // TASK - 3
 function concatenateArrays<T>(...arrays: T[][]): T[] {
-    return ([] as T[]).concat(...arrays)
+    return ([] as T[]).concat(...arrays);
 };
 
-const arrayResult = concatenateArrays(["a", "b"], ["c"], ["d"]);
-console.log(arrayResult);
+const finalArray = concatenateArrays([1, 2, 3], [4], [5]);
+
+console.log(finalArray);
+
+
+
+// TASK - 4
+class Vehicle {
+    private _make: string;
+    private _year: number;
+
+    constructor(make: string, year: number) {
+        this._make = make;
+        this._year = year;
+    };
+
+    getInfo() {
+        return `Make: ${this._make}, Year: ${this._year}`;
+    };
+};
+
+
+class Car extends Vehicle {
+    private _model: string;
+
+    constructor(make: string, year: number, model: string) {
+        super(make, year);
+        this._model = model;
+    };
+
+    getModel(): string {
+        return `Model: ${this._model}`;
+    };
+};
+
+
+const myCar = new Car("America", 2024, "Tesla CyberTruck");
+
+console.log(myCar.getInfo());
+console.log(myCar.getModel());
