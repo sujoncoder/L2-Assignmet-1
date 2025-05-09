@@ -88,6 +88,31 @@ function processValue(value: string | number): number {
     return typeof value === "string" ? value.length : value * 2;
 };
 
-const processedResult = processValue(6);
+const processedResult = processValue("iamsujon");
 
 console.log(processedResult);
+
+
+
+// TASK - 6
+
+interface Product {
+    name: string;
+    price: number;
+};
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+    if (products.length === 0) return null;
+
+    return products.reduce((maxProduct, currentProduct) => currentProduct.price > maxProduct.price ? currentProduct : maxProduct);
+};
+
+const products = [
+    { name: "Pen", price: 10 },
+    { name: "Notebook", price: 25 },
+    { name: "Bag", price: 50 }
+];
+
+const richProduct = getMostExpensiveProduct(products);
+
+console.log(richProduct);
