@@ -35,3 +35,9 @@ console.log(filteredBooks);
 
 
 // TASK - 3
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+    return ([] as T[]).concat(...arrays)
+};
+
+const arrayResult = concatenateArrays(["a", "b"], ["c"], ["d"]);
+console.log(arrayResult);
