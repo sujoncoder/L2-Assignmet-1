@@ -1,5 +1,5 @@
 // Note: If you want to run this code, and see output on the terminal. 
-// Open vs code terminal then paste this command "tsnd --respawn index.ts"
+// Open vs code terminal then paste this command "tsnd --respawn index.ts".
 
 
 function formatString(input: string, toUpper?: boolean): string {
