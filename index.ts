@@ -1,4 +1,7 @@
-// TASK - 1
+// Note: If you want to run this code, and see output on the terminal. 
+// Open vs code terminal then paste this command "tsnd --respawn index.ts"
+
+
 function formatString(input: string, toUpper?: boolean): string {
     return toUpper === false ? input.toLowerCase() : input.toUpperCase();
 };
@@ -9,7 +12,10 @@ console.log("Task-1:", formatString("hello", true));
 
 
 
-// TASK - 2
+
+
+
+
 
 type BookType = { title: string; rating: number };
 
@@ -36,7 +42,11 @@ console.log("Task-2:", filterByRating(books));
 
 
 
-// TASK - 3
+
+
+
+
+
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     return ([] as T[]).concat(...arrays);
 };
@@ -47,7 +57,11 @@ console.log("Task-3:", concatenateArrays([1, 2, 3], [4], [5]));
 
 
 
-// TASK - 4
+
+
+
+
+
 class Vehicle {
     private _make: string;
     private _year: number;
@@ -76,7 +90,6 @@ class Car extends Vehicle {
     };
 };
 
-
 const myCar = new Car("America", 2024, "Tesla CyberTruck");
 
 console.log("Task-4:", myCar.getInfo());
@@ -86,7 +99,10 @@ console.log("Task-4:", myCar.getModel());
 
 
 
-// TASK - 5
+
+
+
+
 
 function processValue(value: string | number): number {
     return typeof value === "string" ? value.length : value * 2;
@@ -100,7 +116,10 @@ console.log("Task-5:", processedResult);
 
 
 
-// TASK - 6
+
+
+
+
 
 interface Product {
     name: string;
@@ -127,7 +146,11 @@ console.log("Task-6:", richProduct);
 
 
 
-// Task - 7
+
+
+
+
+
 enum Day {
     Monday,
     Tuesday,
@@ -151,7 +174,11 @@ console.log("Task-7:", getDayType(Day.Sunday));
 
 
 
-// Task - 8
+
+
+
+
+
 async function squareAsync(n: number): Promise<number> {
 
     return new Promise((resolve, reject) => {
@@ -167,7 +194,6 @@ async function squareAsync(n: number): Promise<number> {
     });
 
 };
-
 
 async function run() {
     try {
