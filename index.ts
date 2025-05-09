@@ -3,8 +3,9 @@ function formatString(input: string, toUpper?: boolean): string {
     return toUpper === false ? input.toLowerCase() : input.toUpperCase();
 };
 
-const result = formatString("hello");
-console.log("Task-1:", result)
+console.log("Task-1:", formatString("hello", true));
+
+
 
 
 
@@ -29,8 +30,9 @@ const books = [
     { title: "মারহাবা, জাভাস্ক্রিপ্টে মারো থাবা", rating: 4.7 }
 ];
 
-const filteredBooks = filterByRating(books);
-console.log("Task-2:", filteredBooks);
+console.log("Task-2:", filterByRating(books));
+
+
 
 
 
@@ -39,9 +41,9 @@ function concatenateArrays<T>(...arrays: T[][]): T[] {
     return ([] as T[]).concat(...arrays);
 };
 
-const finalArray = concatenateArrays([1, 2, 3], [4], [5]);
+console.log("Task-3:", concatenateArrays([1, 2, 3], [4], [5]));
 
-console.log("Task-3:", finalArray);
+
 
 
 
@@ -82,6 +84,8 @@ console.log("Task-4:", myCar.getModel());
 
 
 
+
+
 // TASK - 5
 
 function processValue(value: string | number): number {
@@ -91,6 +95,8 @@ function processValue(value: string | number): number {
 const processedResult = processValue("iamsujon");
 
 console.log("Task-5:", processedResult);
+
+
 
 
 
@@ -120,6 +126,7 @@ console.log("Task-6:", richProduct);
 
 
 
+
 // Task - 7
 enum Day {
     Monday,
@@ -139,6 +146,8 @@ function getDayType(day: Day): string {
 
 console.log("Task-7:", getDayType(Day.Monday));
 console.log("Task-7:", getDayType(Day.Sunday));
+
+
 
 
 
@@ -162,8 +171,8 @@ async function squareAsync(n: number): Promise<number> {
 
 async function run() {
     try {
-        const res = await squareAsync(-8);
-        console.log(res)
+        const res = await squareAsync(8);
+        console.log("Task-8:", res)
     } catch (error: any) {
         console.log("Task-8:", error.message)
     }
